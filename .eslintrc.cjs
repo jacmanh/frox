@@ -17,8 +17,11 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
-  plugins: ['react-refresh', 'prettier'],
+  plugins: ['react-refresh', 'import', 'prettier'],
   rules: {
+    "import/no-internal-modules": [ "error", {
+      "forbid": ["@frox/**/*"]
+    }],
     'react/react-in-jsx-scope': 'off',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
