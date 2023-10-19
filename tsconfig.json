@@ -24,7 +24,8 @@
     "baseUrl": "./src",
     "paths": {
       "@frox/*": ["./packages/*"],
-      "frox-design/*": ["../node_modules/frox-design/*"],
+      "@app/*": ["./*"],
+      "@components/*": ["./components/*"],
     }
   },
   "include": ["src"],

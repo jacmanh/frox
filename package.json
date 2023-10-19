@@ -1,7 +1,7 @@
 {
   "name": "frox",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,11 +13,15 @@
     "prettier:check": "prettier --check ."
   },
   "dependencies": {
-    "frox-design": "link:../frox-design",
+    "@hookform/resolvers": "^3.3.2",
+    "frox-design": "^0.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
     "styled-components": "^6.0.7",
-    "vite-plugin-svgr": "^3.2.0"
+    "vite-plugin-svgr": "^3.2.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
