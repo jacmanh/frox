@@ -1,13 +1,13 @@
 import { useForm } from 'react-hook-form'
 
 import { RegisterSchema } from '@app/pages/Register/Register.schema.ts'
+import FacebookImg from '@assets/facebook.png'
+import GoogleImg from '@assets/google.png'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Checkbox, Field, Grid } from 'frox-design'
 import { createGlobalStyle } from 'styled-components'
 import { z } from 'zod'
 
-import FacebookImg from './assets/facebook.png'
-import GoogleImg from './assets/google.png'
 import RocketImg from './assets/rocket.png'
 import * as Styled from './Register.styled'
 

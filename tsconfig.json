@@ -26,6 +26,7 @@
       "@frox/*": ["./packages/*"],
       "@app/*": ["./*"],
       "@components/*": ["./components/*"],
+      "@assets/*": ["./assets/*"],
     }
   },
   "include": ["src"],
