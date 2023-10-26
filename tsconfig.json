@@ -28,7 +28,9 @@
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
-      "@routes/*": ["./routes/*"]
+      "@routes/*": ["./routes/*"],
+      // Packages
+      "@ecommerce/*": ["./packages/ecommerce/*"],
     }
   },
   "include": ["src"],

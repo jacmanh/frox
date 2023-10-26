@@ -10,9 +10,19 @@ const RegisterStyles = createGlobalStyle`
   }
 `
 
-export const AuthLayout = () => (
-  <Styled.Wrapper>
-    <Outlet />
-    <RegisterStyles />
-  </Styled.Wrapper>
-)
+export const AuthLayout = () => {
+  if (localStorage.getItem('token')) {
+    localStorage.remove('token')
+  }
+
+  return (
+    <>
+      <Styled.Wrapper>
+        <Outlet />
+
+        <RegisterStyles />
+      </Styled.Wrapper>
+      <Styled.Switcher />
+    </>
+  )
+}

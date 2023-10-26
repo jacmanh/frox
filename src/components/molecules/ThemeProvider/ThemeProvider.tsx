@@ -1,37 +1,30 @@
 import React, { PropsWithChildren, useState } from 'react'
 
-import { darkTheme, Icon, lightTheme, Toggle } from 'frox-design'
+import { darkTheme, lightTheme } from 'frox-design'
 import { ThemeProvider as ThemeProviderStyled } from 'styled-components'
 
-import * as Styled from './ThemeProvider.styled'
-
-type Themes = 'light' | 'dark'
+export type Themes = 'light' | 'dark'
 
 type ThemeProviderProps = PropsWithChildren<unknown>
 
+type ThemeContextProps = {
+  theme: Themes
+  setTheme: React.Dispatch<React.SetStateAction<Themes>>
+}
+
+export const ThemeContext = React.createContext<ThemeContextProps>({
+  theme: 'light',
+  setTheme: () => {}
+})
+
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Themes>((localStorage.getItem('theme') as Themes) || 'light')
-  const isChecked = theme === 'dark'
-
-  const switchTheme = (e: React.SyntheticEvent<HTMLInputElement>) => {
-    let newTheme: Themes = 'light'
-    if (e.currentTarget.checked) {
-      newTheme = 'dark'
-    }
-
-    localStorage.setItem('theme', newTheme)
-    setTheme(newTheme)
-  }
 
   return (
-    <ThemeProviderStyled theme={theme === 'light' ? lightTheme : darkTheme}>
-      {children}
-
-      <Styled.Container>
-        <Styled.Sun name="sun" />
-        <Toggle id="theme" name="theme" defaultChecked={isChecked} onChange={switchTheme} />
-        <Icon name="moon" />
-      </Styled.Container>
-    </ThemeProviderStyled>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <ThemeProviderStyled theme={theme === 'light' ? lightTheme : darkTheme}>
+        {children}
+      </ThemeProviderStyled>
+    </ThemeContext.Provider>
   )
 }
