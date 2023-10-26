@@ -18,7 +18,7 @@ export const Button = styled(ButtonComponent)`
   font-weight: ${({ theme }) => theme.font.weight.default};
 `
 
-export const Information = styled.div`
+export const Information = styled.p`
   font-size: ${({ theme }) => theme.font.size.xs};
   text-align: left;
 `

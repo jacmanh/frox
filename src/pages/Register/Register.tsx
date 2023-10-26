@@ -34,8 +34,19 @@ export const Register = () => {
         <img src={RocketImg} alt="Register" />
         <h5>Create an account</h5>
         <p>You are welcome!</p>
+
+        <Styled.Information>
+          This is a demo project. <br />
+          The registration is currently not functional, and no data will be saved <br />
+          You will be automatically logged into a demo account.
+        </Styled.Information>
+
         <Grid $gap="md">
-          <Grid $gap="md" $templateColumns="50% 50%" $alignItems="start">
+          <Grid
+            $gap="md"
+            $templateColumns="calc(50% - 0.5rem) calc(50% - 0.5rem)"
+            $alignItems="start"
+          >
             <Field
               {...register('firstName')}
               label="Firstname"
@@ -77,12 +88,6 @@ export const Register = () => {
             iconEnd="eye"
             error={errors.confirmPassword?.message}
           />
-
-          <Styled.Information>
-            This is a demo project. <br />
-            The registration is currently not functional, and no data will be saved <br />
-            You will be automatically logged into a demo account.
-          </Styled.Information>
 
           <Button type="submit" disabled={!isValid && isSubmitted}>
             Sign Up
