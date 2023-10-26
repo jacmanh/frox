@@ -1,11 +1,11 @@
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 
-import { RegisterSchema } from '@app/pages/Register/Register.schema.ts'
+import { RegisterSchema } from '@app/pages/Register/Register.schema'
 import FacebookImg from '@assets/facebook.png'
 import GoogleImg from '@assets/google.png'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { authPaths } from '@routes/authRoutes.tsx'
+import { authPaths } from '@routes/authRoutes'
 import { Button, Checkbox, Field, Grid } from 'frox-design'
 import { z } from 'zod'
 
