@@ -1,5 +1,6 @@
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
+import { Icon } from 'frox-design'
 import { createGlobalStyle } from 'styled-components'
 
 import * as Styled from './AuthLayout.styled'
@@ -17,12 +18,18 @@ export const AuthLayout = () => {
 
   return (
     <>
+      <Styled.AppSwitcher>
+        <Link to="/">
+          <Icon name="arrowLeft" />
+          Back to App Switcher
+        </Link>
+      </Styled.AppSwitcher>
       <Styled.Wrapper>
         <Outlet />
 
         <RegisterStyles />
       </Styled.Wrapper>
-      <Styled.Switcher />
+      <Styled.ThemeSwitcherToggle />
     </>
   )
 }

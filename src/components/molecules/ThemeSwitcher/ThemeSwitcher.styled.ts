@@ -6,9 +6,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: ${({ theme }) => theme.space.sm};
+  padding: ${({ theme }) => theme.space.md};
   width: 100%;
   max-width: 200px;
-  height: 50px;
   border-radius: ${({ theme }) => theme.size.borderRadius.lg};
   background-color: ${({ theme }) => theme.background.secondary};
 `

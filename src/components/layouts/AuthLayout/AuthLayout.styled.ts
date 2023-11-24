@@ -10,9 +10,18 @@ export const Wrapper = styled.div`
   padding: ${({ theme }) => theme.space.lg};
 `
 
-export const Switcher = styled(ThemeSwitcher)`
+export const ThemeSwitcherToggle = styled(ThemeSwitcher)`
   position: fixed;
   bottom: 5%;
   left: 5%;
+  background-color: ${({ theme }) => theme.background.primary};
+`
+
+export const AppSwitcher = styled.div`
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  border-radius: ${({ theme }) => theme.size.borderRadius.lg};
+  padding: ${({ theme }) => theme.space.md};
   background-color: ${({ theme }) => theme.background.primary};
 `
